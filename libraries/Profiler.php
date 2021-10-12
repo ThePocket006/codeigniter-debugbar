@@ -115,7 +115,8 @@ class CI_Profiler
         {
             if ( ! isset($config[$section]))
             {
-                $this->_compile_{$section} = TRUE;
+                $s = "_compile_".$section;
+                $this->$s = TRUE;
             }
         }
 
@@ -143,7 +144,8 @@ class CI_Profiler
         {
             if (in_array($method, $this->_available_sections))
             {
-                $this->_compile_{$method} = ($enable !== FALSE);
+                $s = "_compile_".$method;
+                $this->$s = ($enable !== FALSE);
             }
         }
     }
@@ -358,7 +360,8 @@ class CI_Profiler
     {
         foreach ($this->_available_sections as $section)
         {
-            if ($this->_compile_{$section} !== FALSE)
+            $s = "_compile_".$section;
+            if ($this->$s !== FALSE)
             {
                 $func = '_compile_'.$section;
                 $this->{$func}();
