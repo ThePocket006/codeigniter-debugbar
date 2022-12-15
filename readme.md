@@ -9,7 +9,7 @@ Create `composer.json` file in your application's root if there is none. Add the
 ```json
 {
     "require": {
-        "tan5en5/codeigniter-debugbar": "dev-master"
+        "thepocket006/codeigniter-debugbar": "dev-master"
     }
 }
 ```
